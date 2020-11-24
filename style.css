@@ -43,3 +43,37 @@ html, body {
   justify-self: end;
   font-size: 1.2rem;
 }
+
+@media (max-width: 767px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    flex-direction: column;
+    align-items: center;
+
+    width: 100vw;
+    height: 50vh;
+
+    padding: 50px 15px 50px 15px;
+    background-color: var(--light-gray);
+
+    transform: translateY(-100vh);
+    
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    transition: 0.5s ease-out;
+  }
+
+  .nav-link {
+    padding: 25px 15px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
